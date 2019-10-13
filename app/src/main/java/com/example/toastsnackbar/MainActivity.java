@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast = new Toast(getApplicationContext());
 
                 LayoutInflater inflater = getLayoutInflater();
-                View layout = inflater.inflate(R.layout.toast, (ViewGroup)findViewById(R.id.toast));
+                //Ponemos el layout y el id de donde esta definido el toast.
+                View layout = inflater.inflate(R.layout.toast2, (ViewGroup)findViewById(R.id.toast));
 
                 TextView txtMensaje = (TextView)layout.findViewById(R.id.txtMensaje);
                 txtMensaje.setText("Has pulsado el boton");
